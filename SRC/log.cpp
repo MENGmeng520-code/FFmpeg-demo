@@ -2,28 +2,25 @@
 // Created by 李茹玥 on 2023/7/12.
 //
 #include "log.h"
-#include <iostream>
-#include <string>
-#include <stdio.h>
-#include <stdlib.h>
-#include <sstream>
-#include <iomanip>
 
-using namespace std;
+#include <mutex>
+#include <sstream>
+#include <cstdarg>
+#include <cstring>
 
 static std::mutex mtx;
+
 FILE* f=NULL;
 
-
 void LogInit(){
-    f=fopen("log.txt","w+");
+    // f=fopen("log.txt","w+");
 }
 
 
 void Serialize(const char* fmt,...){
     char buf[1024];
     auto t=std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
-    stringstream ss;
+    std::stringstream ss;
 //    ss<<std::put_time(std::localtime(&t),"%Y-%m-%d %H.%M.%S")<<"--";
     std::string fmt_str;
     fmt_str+=fmt;
@@ -37,10 +34,10 @@ void Serialize(const char* fmt,...){
     printf("%s",buf);
 
     //写日志
-    if(f){
-        fwrite(buf,1, strlen(buf),f);
-        fflush(f);
-    }
+    // if(f){
+    //     fwrite(buf,1, strlen(buf),f);
+    //     fflush(f);
+    // }
 
     va_end(arglist);
     mtx.unlock();
