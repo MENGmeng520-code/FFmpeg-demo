@@ -31,7 +31,7 @@ int main(int argc, char **argv)
     std::string url;
     if(argc == 1)
     {
-        auto fname = std::filesystem::path("test2.mp4");
+        auto fname = std::filesystem::path("test.mp4");
         auto tmp = std::filesystem::path(RESOURCES_DIR) / fname;
         url = tmp.string();
     }
