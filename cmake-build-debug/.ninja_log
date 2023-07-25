@@ -1,0 +1,12 @@
+# ninja log v5
+4	885	1689835813925896533	CMakeFiles/demo3.dir/SRC/main.cpp.o	b6ba476c1cdcf0ad
+2	585	1689576306617958583	CMakeFiles/demo3.dir/SRC/avframequeue.cpp.o	8bf3853fbbaf0991
+3	934	1689580944228352095	CMakeFiles/demo3.dir/SRC/videooutput.cpp.o	3bb4496c9dce904a
+3	736	1689737966484265894	CMakeFiles/demo3.dir/SRC/audiooutput.cpp.o	d1c3be3e39c4d3a5
+1	782	1689560449166258821	CMakeFiles/demo3.dir/SRC/decode.cpp.o	7e7652ef81170fdc
+1	745	1689560449130223382	CMakeFiles/demo3.dir/SRC/avpacketqueue.cpp.o	a9aadd679f33b792
+4	53	1689835848795334900	demo3	e76b6837d3b9f569
+3	576	1689560961945550238	CMakeFiles/demo3.dir/SRC/demuxthread.cpp.o	1d4f1a32ccbe6002
+3	504	1689665442483261308	CMakeFiles/demo3.dir/SRC/log.cpp.o	1fb7f01598f1d657
+0	81	1689990156449976267	build.ninja	537a9214d0682c5f
+4	792	1689835813834724068	CMakeFiles/demo3.dir/SRC/audiooutput1.cpp.o	322daebd38db15f7
