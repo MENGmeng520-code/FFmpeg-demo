@@ -20,7 +20,7 @@ void AVFrameQueue::Abort() {
 int AVFrameQueue::Push(AVFrame *val) {
     AVFrame * frame=av_frame_alloc();
     //视频帧的拷贝
-    av_frame_move_ref(frame,val);
+    av_frame_ref(frame,val);
     return queue_.Push(frame);
 }
 
@@ -43,7 +43,8 @@ AVFrame *AVFrameQueue::Front() {
 }
 
 int AVFrameQueue::Size() {
-    return queue_.Size();
+    int size = queue_.Size();
+    return size;
 }
 
 void AVFrameQueue::release() {
